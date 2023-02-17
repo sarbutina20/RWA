@@ -1,0 +1,18 @@
+.film {
+    text-align: center;
+    h1 {
+        color: #333;
+        font-size: 3em;
+    }
+    p {
+        color: #666;
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin-bottom: 1em;
+    }
+    .error-message {
+        color: red;
+        font-size: 1.5em;
+        text-align: center;
+    }
+}

@@ -1,0 +1,36 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .pagination-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    &:disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+  }
+  
+  .pagination-info {
+    font-weight: bold;
+  }
+  
+  #filter {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    width: 300px;
+  }
+  
+  h2 {
+      color: #4CAF50;
+  }

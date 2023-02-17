@@ -1,0 +1,24 @@
+<div *ngIf="errorMessage">{{errorMessage}}</div>
+
+
+  <ul>
+    <li>Korisničko ime: {{korisnik.korime}}</li>
+    <li>Ime: {{korisnik.ime}}</li>
+    <li>Prezime: {{korisnik.prezime}}</li>
+    <li>Email: {{korisnik.email}}</li>
+    <li>Adresa: {{korisnik.adresa}}</li>
+  </ul>
+  
+  <form (ngSubmit)="azurirajProfil()" #formaProfil="ngForm">
+    <label for="ime">Ime</label>
+    <input name="ime" id="ime" type="text" [(ngModel)]="ime" required>
+    <br>
+    <label for="prezime">Prezime</label>
+    <input name="prezime" id="prezime" type="text" [(ngModel)]="prezime" required>
+    <br>
+    <label for="adresa">Adresa</label>
+    <input name="adresa" id="adresa" type="text" [(ngModel)]="adresa" required>
+    <br>
+    <input type="submit" value="Šalji">
+  </form>
+

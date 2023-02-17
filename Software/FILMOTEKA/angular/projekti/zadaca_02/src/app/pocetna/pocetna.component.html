@@ -1,0 +1,13 @@
+<p>Malo se duže učitavaju filmovi</p>
+<ol>
+  <li *ngFor="let zanr of sviZanrovi; index as i">{{zanr.naziv}}
+    <ul>
+      <li *ngFor="let film of sviFilmoviPoZanrovima[i]; index as j">
+          <div *ngIf="j == 0 || j == 1">
+              {{film.naziv}}
+            </div></li>        
+    </ul>
+  </li>  
+</ol>
+
+  

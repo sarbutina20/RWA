@@ -1,0 +1,35 @@
+.formaZanrovi {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 2em;
+    label {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+    input[type="text"] {
+      padding: 0.5em;
+      margin-bottom: 1em;
+      border-radius: 5px;
+      border: none;
+    }
+    input[type="submit"] {
+      padding: 0.7em 1.2em;
+      background-color: #1070ca;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      &:disabled {
+        background-color: gray;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    margin-top: 1em;
+  }

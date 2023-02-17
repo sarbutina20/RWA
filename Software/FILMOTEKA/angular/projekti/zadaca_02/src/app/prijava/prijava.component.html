@@ -1,0 +1,28 @@
+<div >
+  <re-captcha [hidden]="!captcha" (resolved)="resolved($event)" sitekey="6LdKb-kjAAAAAHMM77twh57RxiqFy8WUQ5JT72D4"></re-captcha> 
+</div>
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+    <label for="korime">Korisničko ime</label>
+    <input name="korime" id="korime" type="text" [(ngModel)]="korime" required>
+    <br>
+    <label for="lozinka">Lozinka</label>
+    <input name="lozinka" id="lozinka" type="password" [(ngModel)]="lozinka" required>
+    <br>
+    <input type="submit" value="Prijava">
+  </form>
+
+
+  <br>
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+<br>
+<div>
+    <p><u>Za registriranog korisnika:</u> <br>
+    korime = obican,
+    lozinka = rwa
+    <br>
+    <u>Za admina:</u><br> 
+    korime = administrator,
+    lozinka = rwa
+    </p>
+
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="errorMessage">{{errorMessage}}</div>
+<div *ngIf="pristup">
+  <ol>
+    <li *ngFor="let film of sviFilmovi; index as i">
+      <a [routerLink]="['/film', film.id]">{{film.naziv}}</a>
+    </li> 
+  </ol>
+</div>
+
