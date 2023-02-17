@@ -1,0 +1,23 @@
+<div *ngIf="errorMessage">{{errorMessage}}</div>
+
+<form #regForm="ngForm" (ngSubmit)="registracija()">
+  <label for="ime">Ime</label>
+  <input name="ime" id="ime" type="text" [(ngModel)]="ime" required>
+  <br>
+  <label for="prezime">Prezime</label>
+  <input name="prezime" id="prezime" type="text" [(ngModel)]="prezime" required>
+  <br>
+  <label for="email">Email</label>
+  <input name="email" id="email" type="email" [(ngModel)]="email" required>
+  <br>
+  <label for="korime">Korisničko ime</label>
+  <input name="korime" id="korime" type="text" [(ngModel)]="korime" required>
+  <br>
+  <label for="lozinka">Lozinka</label>
+  <input name="lozinka" id="lozinka" type="password" [(ngModel)]="lozinka" required>
+  <br>
+  <label for="adresa">Adresa</label>
+  <input name="adresa" id="adresa" type="text" [(ngModel)]="adresa" required>
+  <br>
+  <input type="submit" value="Registracija">
+</form>

@@ -1,0 +1,14 @@
+<div *ngIf="errorMessage">{{errorMessage}}</div>
+<div *ngIf="pristup">
+  <ol>
+    <li *ngFor="let zanr of sviZanrovi; index as i">
+      <h2>{{zanr.naziv}}</h2>
+      <form class="formaZanrovi" (ngSubmit)="azurirajZanr(zanr.id, formaZanrovi.value)" #formaZanrovi="ngForm">
+        <label for="naziv">Naziv žanra</label>
+        <input name="naziv" [(ngModel)]="zanr.naziv" type="text" required />
+        <input type="submit" value="Promjeni" [disabled]="formaZanrovi.invalid" />
+      </form>
+    </li> 
+  </ol>
+</div>
+

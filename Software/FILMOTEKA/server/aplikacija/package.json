@@ -1,0 +1,16 @@
+{
+  "name": "servis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "restServer.js",
+  "scripts": {
+    "start": " NODE_PATH=/usr/lib/node_modules/ node --experimental-fetch appServer.js ../konfiguracija.csv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "author": "Sebastian Arbutina",
+  "license": "ISC"
+}

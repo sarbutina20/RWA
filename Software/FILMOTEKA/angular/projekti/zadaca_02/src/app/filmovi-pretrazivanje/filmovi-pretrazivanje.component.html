@@ -1,0 +1,18 @@
+<div *ngIf="errorMessage">{{errorMessage}}</div>
+<div *ngIf="pristup">
+  <h2>Popis filmova</h2>
+  <ul>
+    <li *ngFor="let film of filmovi">
+        {{film.naziv}}
+    </li>
+</ul>
+<div class="pagination-container">
+  <button class="pagination-button" (click)="promijeniStranicu(page - 1)" [disabled]="page == 1">Prethodna</button>
+  <span class="pagination-info">Stranica {{ page }} od {{ totalPages }}</span>
+  <button class="pagination-button" (click)="promijeniStranicu(page + 1)" [disabled]="page == totalPages">Sljedeća</button>
+</div>
+<input type="text" id="filter" placeholder="Ključne riječi " (input)="filtriraj($event)">
+<h2>FILTRIRANJE MI RADI, ALI MI TMDB API VRAĆA BLESAVE PODATKE :D</h2>
+
+
+  

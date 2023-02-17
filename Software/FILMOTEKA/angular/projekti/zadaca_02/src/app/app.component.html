@@ -1,0 +1,22 @@
+<header><h1>Filmoteka</h1></header>
+<nav>
+  <a routerLink="/" (click)="putanja='pocetna'">Početna</a>
+  <a routerLink="/prijava" (click)="putanja='prijava'">Prijava</a>
+  <a routerLink="/registracija" (click)="putanja='registracija'">Registracija</a>
+  <a routerLink="/dokumentacija" (click)="putanja='dokumentacija'">Dokumentacija</a>
+  <a *ngIf="uloga === 1 || uloga === 2"  routerLink="/filmoviPretrazivanje" (click)="putanja='filmoviPretrazivanje'">Filmovi Pretraživanje</a>
+  <a *ngIf="uloga === 1 || uloga === 2"  routerLink="/profil" (click)="putanja='profil'">Profil</a>
+  <a *ngIf="uloga === 1 || uloga === 2"  routerLink="/filmoviPregled" (click)="putanja='filmoviPregled'">Filmovi Pregled</a>
+  <a *ngIf="uloga === 2" routerLink="/zanrovi" (click)="putanja='zanrovi'">Žanrovi</a>
+  <a routerLink="/odjava" (click)="putanja='odjava'">Odjava</a>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<!--<app-registracija></app-registracija>
+<app-prijava></app-prijava>
+<app-dokumentacija></app-dokumentacija>
+<app-zanrovi></app-zanrovi>
+<app-profil></app-profil>-->
+
+  

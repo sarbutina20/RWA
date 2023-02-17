@@ -1,0 +1,16 @@
+ol {
+    list-style: none;
+    li {
+        font-weight: bold;
+        margin-bottom: 10px;
+        ul {
+            margin-left: 20px;
+            li {
+                margin-bottom: 5px;
+                div {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

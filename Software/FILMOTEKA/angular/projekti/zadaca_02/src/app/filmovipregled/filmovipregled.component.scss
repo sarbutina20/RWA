@@ -1,0 +1,25 @@
+div {
+    &.errorMessage {
+        color: #ff0000;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &[ng-if='pristup'] {
+        ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                a {
+                    font-size: 1.5rem;
+                    color: #0000ff;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
