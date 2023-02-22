@@ -37,3 +37,10 @@ Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji
 | Korisnik | Filmovi pretraživanje          | Može upisati ključne riječi po kojima se pretražuju filmovi sa servisa TMDB (preko api/tmdb). Broj stranica nalazi se u podatku “total_pages”.             |
 |    Admin      |     Žanrovi                           |    Vidi pregled svih žanrova u bazi podataka, može ažurirati naziv žanra, može obrisati sve žanrove za koje nema filmova u bazi.       |   
 
+## Tablica 3. Zahtjevi vezani uz provjeru konfiguracijskih podataka putem RegEx
+| Naziv konfiguracije    | Vrijednost                     | Opis                                                                                         |
+| -------- | ------------------------------ | -------------------------------------------------------------------------------------------- |
+| rest.korime     | Veličina: 15-20 znakova Dozvoljena slova i brojke Obavezno: 2 slova, 2 broja                        | Sadrži korisničko ime za pristup rest
+servisu   |  
+| rest.lozinka     | Veličina: 20 - 100 znakova Dozvoljen bilo koji znak Obavezno: 3 slova, 3 brojke i 3 specijalna znaka                  | Sadrži lozinku za pristup rest servisu   |               
+| app.broj.stranica      | Broj od 5 - 100  |Sadrži brojčani podatak koji govori koliko se podataka odjednom prikazuje u tablicama      |           
