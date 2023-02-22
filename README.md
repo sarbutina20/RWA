@@ -35,5 +35,5 @@ Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji
 | Korisnik | Profil                         | Vidi svoje podatke (ime, prezime, korisničko ime, e-mail, …) i može ih ažurirati. Korisničko ime i e-mail se ne mogu ažurirati.  |  
 | Korisnik | Filmovi pregled                | Vidi popis svih filmova koji postoje u bazi, može filmove filtrirati po žanru i/ili datumu unosa. Datumsko filtriranje čita podatke od unesenog datuma do današnjeg datuma. Može uzlazno sortirati filmove po nazivu filma, datumu ili nazivu žanra. Može kliknuti na naziv filma i dobiti sve podatke o filmu.          |                    |
 | Korisnik | Filmovi pretraživanje          | Može upisati ključne riječi po kojima se pretražuju filmovi sa servisa TMDB (preko api/tmdb). Broj stranica nalazi se u podatku “total_pages”.             |
-|    Admin      |     Žanrovi                           |    Vidi pregled svih žanrova u bazi podataka, može ažurirati naziv žanra, može obrisati sve žanrove za koje nema filmova u bazi.       |                       
+|    Admin      |     Žanrovi                           |    Vidi pregled svih žanrova u bazi podataka, može ažurirati naziv žanra, može obrisati sve žanrove za koje nema filmova u bazi.       |   
 
