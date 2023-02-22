@@ -27,13 +27,13 @@ Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji
 | api/tmdb/filmovi?kljucaRijec=rijec1[,rijec2]&stranica=broj | Prosljeđuje listu filmova koju vrati servis TMDB, filtriranu po ključnoj riječi (kljucaRijec) i/ili stranici (broj) | | | 
 
 ## Tablica 2. Pregled funkcionalnosti Web aplikacije
-| Uloga    | Stranica/e                     | Opis                                                                                         |               |
-| -------- | ------------------------------ | -------------------------------------------------------------------------------------------- | ---------------------- |
-| Gost     | Početna                        | Prikazuje popis žanrova u bazi podataka i nasumice prikazuje 2 filma za svaki žanr koji postoje u bazi podataka.          |          |
-| Gost     | Dokumentacija                  | Prikazuje stranicu dokumentacija.html opisanu ranije                                         |               |
-| Gost     | Registracija, Prijava, Odjava  | Gost se može se registrirati kao novi korisnik. Lozinka se u bazu ne smije spremati u čitljivom obliku i treba koristiti sol kod spremanja. Kod prijave treba koristiti autentikacija s lozinkom. Jednom prijavljeni korisnik može se odjaviti kad želi. | Odrađeno               |               
-| Korisnik | Profil                         | Vidi svoje podatke (ime, prezime, korisničko ime, e-mail, …) i može ih ažurirati. Korisničko ime i e-mail se ne mogu ažurirati.  |   |
-| Korisnik | Filmovi pregled                | Vidi popis svih filmova koji postoje u bazi, može filmove filtrirati po žanru i/ili datumu unosa. Datumsko filtriranje čita podatke od unesenog datuma do današnjeg datuma. Može uzlazno sortirati filmove po nazivu filma, datumu ili nazivu žanra. Može kliknuti na naziv filma i dobiti sve podatke o filmu.          |     |                    |
-| Korisnik | Filmovi pretraživanje          | Može upisati ključne riječi po kojima se pretražuju filmovi sa servisa TMDB (preko api/tmdb). Broj stranica nalazi se u podatku “total_pages”.                 |     |
+| Uloga    | Stranica/e                     | Opis                                                                                         |
+| -------- | ------------------------------ | -------------------------------------------------------------------------------------------- |
+| Gost     | Početna                        | Prikazuje popis žanrova u bazi podataka i nasumice prikazuje 2 filma za svaki žanr koji postoje u bazi podataka.              |
+| Gost     | Dokumentacija                  | Prikazuje stranicu dokumentacija.html opisanu ranije                                         |               
+| Gost     | Registracija, Prijava, Odjava  | Gost se može se registrirati kao novi korisnik. Lozinka se u bazu ne smije spremati u čitljivom obliku i treba koristiti sol kod spremanja. Kod prijave treba koristiti autentikacija s lozinkom. Jednom prijavljeni korisnik može se odjaviti kad želi.              |               
+| Korisnik | Profil                         | Vidi svoje podatke (ime, prezime, korisničko ime, e-mail, …) i može ih ažurirati. Korisničko ime i e-mail se ne mogu ažurirati.  |  
+| Korisnik | Filmovi pregled                | Vidi popis svih filmova koji postoje u bazi, može filmove filtrirati po žanru i/ili datumu unosa. Datumsko filtriranje čita podatke od unesenog datuma do današnjeg datuma. Može uzlazno sortirati filmove po nazivu filma, datumu ili nazivu žanra. Može kliknuti na naziv filma i dobiti sve podatke o filmu.          |                    |
+| Korisnik | Filmovi pretraživanje          | Može upisati ključne riječi po kojima se pretražuju filmovi sa servisa TMDB (preko api/tmdb). Broj stranica nalazi se u podatku “total_pages”.             |
 |    Admin      |     Žanrovi                           |    Vidi pregled svih žanrova u bazi podataka, može ažurirati naziv žanra, može obrisati sve žanrove za koje nema filmova u bazi.       |                       
 
