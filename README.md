@@ -34,7 +34,6 @@ Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji
 | Gost     | Registracija, Prijava, Odjava  | Gost se može se registrirati kao novi korisnik. Lozinka se u bazu ne smije spremati u čitljivom obliku i treba koristiti sol kod spremanja. Kod prijave treba koristiti autentikacija s lozinkom. Jednom prijavljeni korisnik može se odjaviti kad želi. | Odrađeno               |               
 | Korisnik | Profil                         | Vidi svoje podatke (ime, prezime, korisničko ime, e-mail, …) i može ih ažurirati. Korisničko ime i e-mail se ne mogu ažurirati.  | Odrađeno               |
 | Korisnik | Filmovi pregled                | Vidi popis svih filmova koji postoje u bazi, može filmove filtrirati po žanru i/ili datumu unosa. Datumsko filtriranje čita podatke od unesenog datuma do današnjeg datuma. Može uzlazno sortirati filmove po nazivu filma, datumu ili nazivu žanra. Može kliknuti na naziv filma i dobiti sve podatke o filmu.          | Odrađen samo popis     |                    |
-| Korisnik | Filmovi pretraživanje          | Može upisati ključne riječi po kojima se pretražuju filmovi sa servisa TMDB (preko api/tmdb). Broj stranica nalazi se u podatku “total_pages”. Ako pronađe film koji mu se sviđa može kliknuti na dodaj u bazu. Film se svim dobivenim                   | Nije implementirano     |
-|          |                                |              | dodavanje filma u bazu. |
+| Korisnik | Filmovi pretraživanje          | Može upisati ključne riječi po kojima se pretražuju filmovi sa servisa TMDB (preko api/tmdb). Broj stranica nalazi se u podatku “total_pages”.                 | Nije implementirano     |
 |          |                                |                |                       
 
