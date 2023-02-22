@@ -19,7 +19,7 @@ Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji
 | api/korisnici/korime | vraća određenog korisnika | “metoda nije dopuštena” (405)" | Ažurira određenog korisnika | 
 | api/korisnici/korime/aktivacija | | “metoda nije dopuštena “ (405) | Aktivira novog korisnika | 
 | api/korisnici/korime/prijava | | Provjerava podatke prijave i vraća je li korisnik uspješno prijavljen | | 
-| api/filmovi/?stranica=broj&brojFilmova=broj[&datum=datum][&zanr=idZanr][&naziv=dioNazivFilma][&sortiraj=[d ILI z ILI n]] | Uz dobivene podatke čita sve podatke o filmu s vanjskog servisa i dodaje novi film | Uz dobivene podatke čita sve podatke o filmu s vanjskog servisa i dodaje novi film | |
+| api/filmovi/?stranica=broj&brojFilmova=broj[&datum=datum][&zanr=idZanr][&naziv=dioNazivFilma][&sortiraj=[d ILI z ILI n]] | vraća listu određenog broja filmova za neku stranicu (broj), opcionalno filtrirano po datumu unosa (datum) i/ili žanru (idZanr) i/ili nazivu filma (dioNazivFilma), te može sortirati uzlazno po datumu (d), nazivu (n) ili žanru (z) | Uz dobivene podatke čita sve podatke o filmu s vanjskog servisa i dodaje novi film | |
 | api/filmovi/id | Vraća podatke određenog filma (id) | “metoda nije dopuštena” (405) | Ažurira podatke određenog filma | Briše određeni film 
 | api/zanr/ | Vraća listu žanrova | Dodaje novi žanr | | Briše sve žanrove za koje ne postoji film.
 | api/zanr/id | Vraća podatke određenog žanra (id) | “metoda nije dopuštena” (405) | Ažurira postojeći žanr | Briše određeni žanr|
