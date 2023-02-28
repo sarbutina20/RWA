@@ -15,25 +15,6 @@ Ako datoteka konfiguracije ne postoji pri podizanju servera, javlja se greška i
 Ako konfiguracijska datoteka postoji, radi se provjera postoje li svi potrebni konfiguracijski podaci unutar konfiguracijske datoteke.
 Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji ili nije dozvoljen javljaju se greške.  
 
-## Specifikacija zahtjeva za prvu fazu kreiranja projekta (Zadaća 1)
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-1.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-2.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-3.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-4.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-5.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-6.png)
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-7.png)
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-8.png)
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-9.png)
-
-## Specifikacija zahtjeva za drugu fazu kreiranja projekta (Zadaća 2)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-1.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-2.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-3.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-4.png)  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-5.png)  
-
-
 ## Tablica 1. Pregled resursa, metoda i parametara REST servisa
 | Resurs parametri | GET čitanje | POST kreiranje | PUT ažuriranje | DELETE brisanje
 | --- | --- | --- | --- | --- |
@@ -64,4 +45,22 @@ Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji
 | -------- | ------------------------------ | -------------------------------------------------------------------------------------------- |
 | rest.korime     | Veličina: 15-20 znakova Dozvoljena slova i brojke Obavezno: 2 slova, 2 broja                        | Sadrži korisničko ime za pristup rest servisu |
 | rest.lozinka     | Veličina: 20 - 100 znakova Dozvoljen bilo koji znak Obavezno: 3 slova, 3 brojke i 3 specijalna znaka                  | Sadrži lozinku za pristup rest servisu   |               
-| app.broj.stranica      | Broj od 5 - 100  |Sadrži brojčani podatak koji govori koliko se podataka odjednom prikazuje u tablicama      |           
+| app.broj.stranica      | Broj od 5 - 100  |Sadrži brojčani podatak koji govori koliko se podataka odjednom prikazuje u tablicama      |          
+
+## Specifikacija zahtjeva za prvu fazu kreiranja projekta (Zadaća 1)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-1.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-2.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-3.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-4.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-5.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-6.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-7.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-8.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-9.png)
+
+## Specifikacija zahtjeva za drugu fazu kreiranja projekta (Zadaća 2)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-1.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-2.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-3.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-4.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202%20(1)/RWA%20-%20Zada%C4%87a%202%20(1)-5.png)  
