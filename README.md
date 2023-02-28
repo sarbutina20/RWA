@@ -2,13 +2,19 @@
 
 ## Opis projekta
 Filmoteka je projekt kreiran za predmet Razvoj web aplikacija i vođen je zahtjevima specificiranih od strane profesora.
-Filmoteka je web aplikacija koja se sastoji od 2 servera od kojih jedan poslužuje datoteke kreirane u Angularu, a drugi predstavlja REST server koji poslužuje korisničke zahtjeve.
+Filmoteka je web aplikacija koja se sastoji od 2 servera od kojih jedan poslužuje datoteke kreirane u Angularu, a drugi predstavlja REST server koji poslužuje korisničke zahtjeve. Aplikacijski server je pisan u čistom TypeScriptu, dok je pozadinski u JavaScriptu.
 Svaki server se pokreće na zasebnom portu koji se čita iz datoteke, ali se nalaze na istom fizičkom poslužitelju.  
-Za rad aplikacije potrebno je osposobiti MySQL bazu podataka u kojoj su pohranjeni filmovi, korisnici...  
-  
+Za rad aplikacije bilo je potrebno osposobiti bazu podataka u kojoj su pohranjeni svi podatci.
+U samoj web aplikaciji koristi se SQLite baza podataka.
+Dizajn aplikacije je izrađen u SCSS sintaksi.
+U obje aplikacije je složen package.json tako da se sa npm start može pokrenuti pojedini server.  
+**Kako bi pozadinski server radio potrebno je u konfiguracija.csv dodati validni TMDB ključ.**
+
+
+
 REST server predstavlja aplikativno programsko sučelje (API) prema bazi podataka i prema vanjskom servisu (TMDB), a koji koristi web aplikacija za pristup podacima.
-Ako datoteka konfiguracije ne postoji pri podizanju servera, javlja se greška i poslužitelj prestaje s
-radom. Ako konfiguracijska datoteka postoji, radi se provjera postoje li svi potrebni konfiguracijski podaci unutar konfiguracijske datoteke.
+Ako datoteka konfiguracije ne postoji pri podizanju servera, javlja se greška i poslužitelj prestaje s radom.   
+Ako konfiguracijska datoteka postoji, radi se provjera postoje li svi potrebni konfiguracijski podaci unutar konfiguracijske datoteke.
 Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji ili nije dozvoljen javljaju se greške.  
 
 
