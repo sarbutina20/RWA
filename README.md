@@ -7,8 +7,8 @@ Svaki server se pokreće na zasebnom portu koji se čita iz datoteke, ali se nal
 Za rad aplikacije bilo je potrebno osposobiti bazu podataka u kojoj su pohranjeni svi podatci.
 U samoj web aplikaciji koristi se SQLite baza podataka.
 Dizajn aplikacije je izrađen u SCSS sintaksi.
-U obje aplikacije je složen package.json tako da se sa npm start može pokrenuti pojedini server.  
-**Kako bi pozadinski server radio potrebno je u konfiguracija.csv dodati validni TMDB ključ.**
+**U obje aplikacije je složen package.json tako da se sa npm start može pokrenuti pojedini server.**  
+**Kako bi pozadinski server radio potrebno je u konfiguracija.csv dodati validni TMDB ključ.**  
 
 
 
