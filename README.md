@@ -10,13 +10,15 @@ Dizajn aplikacije je izrađen u SCSS sintaksi.
 **U obje aplikacije je složen package.json tako da se sa npm start može pokrenuti pojedini server.**  
 **Kako bi pozadinski server radio potrebno je u konfiguracija.csv dodati validni TMDB ključ.**  
 
-
-
 REST server predstavlja aplikativno programsko sučelje (API) prema bazi podataka i prema vanjskom servisu (TMDB), a koji koristi web aplikacija za pristup podacima.
 Ako datoteka konfiguracije ne postoji pri podizanju servera, javlja se greška i poslužitelj prestaje s radom.   
 Ako konfiguracijska datoteka postoji, radi se provjera postoje li svi potrebni konfiguracijski podaci unutar konfiguracijske datoteke.
 Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji ili nije dozvoljen javljaju se greške.  
 
+Link do specifikacije zadaće 1:  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/Slike/Arhitektura%20softvera.png)
+Link do specifikacije zadaće 2:  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/Slike/Arhitektura%20softvera.png)
 
 ## Tablica 1. Pregled resursa, metoda i parametara REST servisa
 | Resurs parametri | GET čitanje | POST kreiranje | PUT ažuriranje | DELETE brisanje
