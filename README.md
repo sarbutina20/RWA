@@ -2,7 +2,7 @@
 
 ## Opis projekta
 Filmoteka je projekt kreiran za predmet Razvoj web aplikacija i vođen je zahtjevima specificiranih od strane profesora.
-Filmoteka je web aplikacija koja se sastoji od 2 servera od kojih jedan poslužuje datoteke kreirane u Angularu, a drugi predstavlja REST server koji poslužuje korisničke zahtjeve. Aplikacijski server je pisan u čistom TypeScriptu, dok je pozadinski u JavaScriptu.
+Filmoteka je web aplikacija koja se sastoji od 2 servera od kojih jedan poslužuje datoteke kreirane u Angularu, a drugi predstavlja REST server koji poslužuje korisničke zahtjeve. Aplikacijski server je pisan u čistom TypeScriptu, dok je pozadinski u JavaScriptu.  
 Svaki server se pokreće na zasebnom portu koji se čita iz datoteke, ali se nalaze na istom fizičkom poslužitelju.  
 Za rad aplikacije bilo je potrebno osposobiti bazu podataka u kojoj su pohranjeni svi podatci.
 U samoj web aplikaciji koristi se SQLite baza podataka.
