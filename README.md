@@ -16,9 +16,9 @@ Ako konfiguracijska datoteka postoji, radi se provjera postoje li svi potrebni k
 Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji ili nije dozvoljen javljaju se greške.  
 
 Link do specifikacije zadaće 1:  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/Slike/Arhitektura%20softvera.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201.pdf)
 Link do specifikacije zadaće 2:  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/Slike/Arhitektura%20softvera.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202.pdf)
 
 ## Tablica 1. Pregled resursa, metoda i parametara REST servisa
 | Resurs parametri | GET čitanje | POST kreiranje | PUT ažuriranje | DELETE brisanje
