@@ -15,10 +15,16 @@ Ako datoteka konfiguracije ne postoji pri podizanju servera, javlja se greška i
 Ako konfiguracijska datoteka postoji, radi se provjera postoje li svi potrebni konfiguracijski podaci unutar konfiguracijske datoteke.
 Provjera konfiguracijskih podataka se vrši putem RegExa. Ako zahtjev ne postoji ili nije dozvoljen javljaju se greške.  
 
-Link do specifikacije zadaće 1:  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201.pdf)
-Link do specifikacije zadaće 2:  
-![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%202.pdf)
+## Specifikacija zahtjeva za prvu fazu kreiranja projekta (Zadaća 1)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-1.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-2.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-3.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-4.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-5.png)  
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-6.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-7.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-8.png)
+![](https://github.com/sarbutina20/RWA/blob/master/Documentation/RWA%20-%20Zada%C4%87a%201%20(1)/RWA%20-%20Zada%C4%87a%201%20(1)-9.png)  
 
 ## Tablica 1. Pregled resursa, metoda i parametara REST servisa
 | Resurs parametri | GET čitanje | POST kreiranje | PUT ažuriranje | DELETE brisanje
