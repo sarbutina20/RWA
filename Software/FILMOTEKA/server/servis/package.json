@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.18.2"
-    },
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  },
   "author": "Sebastian Arbutina",
   "license": "ISC"
 }

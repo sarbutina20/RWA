@@ -1,23 +1,18 @@
 const konst = require("../konstante.js");
 const mail = require("./moduli/mail.js")
-const kodovi = require("./moduli/kodovi.js");
 
 const portRest = 12242;
 class Autentifikacija {
 
     async dodajKorisnika(korisnik) {
         
-        //let aktivacijskiKod = kodovi.dajNasumceBroj(10000, 99999);
-        //let tajniTOTPkljuc = totp.kreirajTajniKljuc(korisnik.korime);
-
         let tijelo = {
             ime: korisnik.ime,
             prezime: korisnik.prezime,
-            lozinka: kodovi.kreirajSHA256(korisnik.lozinka, "moja sol"),
+            lozinka: korisnik.lozinka,
             email: korisnik.email,
             korime: korisnik.korime,
             aktiviran: 1,
-            //totp: tajniTOTPkljuc
         };
 
         let zaglavlje = new Headers();
@@ -93,8 +88,6 @@ class Autentifikacija {
 
     async prijaviKorisnika(korime, lozinka) {
         
-        console.log(kodovi.kreirajSHA256("rwa", "moja sol"));
-        lozinka = kodovi.kreirajSHA256(lozinka, "moja sol");
         let tijelo = {
             lozinka: lozinka,
         };

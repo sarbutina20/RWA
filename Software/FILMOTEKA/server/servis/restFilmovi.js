@@ -39,7 +39,11 @@ exports.getOdobreni = function (zahtjev, odgovor) {
 
 exports.postFilmovi = function (zahtjev, odgovor) {
     odgovor.type("application/json")
-    let podaci = zahtjev.body;
+    let podaci = {
+        ...zahtjev.body,
+        // Vlasnik filma određuje se iz provjerenog tokena, a ne iz podataka koje šalje klijent.
+        korisnik_id: zahtjev.autoriziraniKorisnik.id
+    };
     let fdao = new FilmoviDAO();
     fdao.dodaj(podaci).then((poruka) => {
         odgovor.send(JSON.stringify(poruka));

@@ -14,51 +14,57 @@ class FilmDAO {
 	}
 
 	dajFiltrirano = async function (parametri) {
-		
-		let brojFilmova = parametri.brojFilmova;
-		let stranica = parametri.stranica;
+		let brojFilmova = Number(parametri.brojFilmova);
+		let stranica = Number(parametri.stranica);
 		let datum = parametri.datum;
 		let naziv = parametri.naziv;
 		let sortiraj = parametri.sortiraj;
 		let zanr = parametri.zanr;
-		let sort;
-		switch(sortiraj) {
-			case 'd': {
-				sort = "datum";
-				break;
-			}
-			case 'n': {
-				sort = "naziv";
-				break;
-			}
-			case 'z': {
-				sort = "zanr_id";
-				break;
-			}
+
+		if (!Number.isInteger(brojFilmova) || brojFilmova <= 0 ||
+			!Number.isInteger(stranica) || stranica <= 0) {
+			throw new TypeError("stranica and brojFilmova must be positive integers");
 		}
-		console.log(sort);
-		
-		console.log(parametri);
 
-		//let sql = "SELECT * FROM film WHERE (datum IS NULL OR datum='" + datum + "') AND (naziv IS NULL OR naziv = '"+naziv +"') ORDER BY "+sort+ " ASC LIMIT " +  brojFilmova + " OFFSET " + ((stranica - 1) * brojFilmova)+";";
+		// Nazivi SQL stupaca ne mogu se zadati parametrima pa su dopušteni samo unaprijed određeni stupci.
+		const stupciZaSortiranje = {
+			d: "film.datum",
+			n: "film.naziv",
+			z: "zanr_has_film.zanr_id"
+		};
+		const sort = stupciZaSortiranje[sortiraj];
+		const trebaSpojZanra = zanr != null || sortiraj === "z";
+		const uvjeti = [];
+		const podaciZaSQL = [];
 
-		let sql = "SELECT * FROM film";
-		if(datum!=null) sql+=" WHERE datum = '" + datum + "'";
-		if(naziv!=null) sql+=" WHERE naziv = '" + naziv + "'";
-		if(zanr!=null) sql+=" JOIN zanr_has_film ON film.id = zanr_has_film.film_id WHERE zanr_has_film.zanr_id = " + zanr;
-		if(sortiraj!=null) {
-			if(sortiraj == 'z') sql+=" JOIN zanr_has_film ON film.id = zanr_has_film.film_id ORDER BY " + sort + " ASC "; 
-			else sql+=" ORDER BY " + sort + " ASC "; 
+		let sql = "SELECT film.* FROM film";
+		if (trebaSpojZanra) {
+			sql += " JOIN zanr_has_film ON film.id = zanr_has_film.film_id";
 		}
-		
-		
 
-		sql += " LIMIT " +  brojFilmova + " OFFSET " + ((stranica - 1) * brojFilmova);
-		sql += ";";
+		if (datum != null) {
+			uvjeti.push("film.datum = ?");
+			podaciZaSQL.push(datum);
+		}
+		if (naziv != null) {
+			uvjeti.push("film.naziv = ?");
+			podaciZaSQL.push(naziv);
+		}
+		if (zanr != null) {
+			uvjeti.push("zanr_has_film.zanr_id = ?");
+			podaciZaSQL.push(zanr);
+		}
+		if (uvjeti.length > 0) {
+			sql += " WHERE " + uvjeti.join(" AND ");
+		}
+		if (sort != null) {
+			sql += " ORDER BY " + sort + " ASC";
+		}
 
+		sql += " LIMIT ? OFFSET ?;";
+		podaciZaSQL.push(brojFilmova, (stranica - 1) * brojFilmova);
 
-		console.log(sql); 
-		var podaci = await this.baza.izvrsiUpit(sql, []);
+		var podaci = await this.baza.izvrsiUpit(sql, podaciZaSQL);
 		
 		return podaci;
 	}

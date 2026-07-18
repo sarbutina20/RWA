@@ -1,4 +1,5 @@
 const KorisnikDAO = require("./korisnikDAO.js");
+const kodovi = require("../aplikacija/moduli/kodovi.js");
 
 exports.getKorisnici = function (zahtjev, odgovor) {
     odgovor.type("application/json")
@@ -9,13 +10,15 @@ exports.getKorisnici = function (zahtjev, odgovor) {
     });
 }
 
-exports.postKorisnici = function (zahtjev, odgovor) {
+exports.postKorisnici = async function (zahtjev, odgovor) {
     odgovor.type("application/json")
-    let podaci = zahtjev.body;
+    let podaci = {
+        ...zahtjev.body,
+        lozinka: await kodovi.hashirajLozinku(zahtjev.body.lozinka)
+    };
     let kdao = new KorisnikDAO();
-    kdao.dodaj(podaci).then((poruka) => {
-        odgovor.send(JSON.stringify(poruka));
-    });
+    let poruka = await kdao.dodaj(podaci);
+    odgovor.send(JSON.stringify(poruka));
 }
 
 exports.deleteKorisnici = function (zahtjev, odgovor) {
@@ -42,20 +45,21 @@ exports.getKorisnik = function (zahtjev, odgovor) {
     });
 }
 
-exports.getKorisnikPrijava = function (zahtjev, odgovor) {
+exports.getKorisnikPrijava = async function (zahtjev, odgovor) {
     odgovor.type("application/json")
     let kdao = new KorisnikDAO();
     let korime = zahtjev.params.korime;
-    kdao.daj(korime).then((korisnik) => {
-        console.log(korisnik)
-        console.log(zahtjev.body)
-        if(korisnik!=null && korisnik.lozinka==zahtjev.body.lozinka)
-            odgovor.send(JSON.stringify(korisnik));
-        else{ 
-            odgovor.status(401)
-            odgovor.send(JSON.stringify({greska: "Krivi podaci!"}))
-        }
-    });
+    let korisnik = await kdao.daj(korime);
+    let lozinkaJeIspravna = korisnik != null &&
+        await kodovi.provjeriLozinku(zahtjev.body.lozinka, korisnik.lozinka);
+
+    if (!lozinkaJeIspravna) {
+        odgovor.status(401);
+        return odgovor.send(JSON.stringify({greska: "Krivi podaci!"}));
+    }
+
+    const { lozinka, ...sigurniKorisnik } = korisnik;
+    odgovor.send(JSON.stringify(sigurniKorisnik));
 }
 exports.postKorisnik = function (zahtjev, odgovor) {
     odgovor.type("application/json")
